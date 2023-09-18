@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AluraPet - perfil</title>
+    <link rel="stylesheet" type="text/css" href="../styles.css" media="screen" />
+
+</head>
+<body>
+    <header>
+        <div class="cabecalho" id="cabecalho"> 
+            <nav class="menu" id="menu">
+                <div class="menu__logo" id="menu__logo">
+                    <img class="menu__logo__imagem" id="menu__logo__imagem" src="../img/Logo-branco.png" alt="Logotipo AluraPet">
+                </div>
+                <div class="menu__home" id="menu__home">
+                    <img class="menu__home_imagem" id="menu__home_imagem" src="../img/Casa.png" alt="Icone link página principal">
+                </div>
+                <div class="menu__mensagem" id="menu__mensagem">
+                    <img class="menu__home_mensagem" id="menu__home_mensagem" src="../img/Mensagens.png" alt="Icone link enviar Mensagem">
+                </div>
+            </nav>
+            <section class="usuario">
+                <div class="usuario__nome">
+                    <p class="usuario__nome__texto legenda">Fulano</p>
+                </div>
+                <div class="usuario__avatar">
+                    <img class="usuario__avatar__imagem" id="usuario__avatar__imagem" src="../img/Usuário.png" alt="Avatar do usuário logado">
+                </div>
+                <div class="usuario__sair">
+                    <a class="legenda link" id="usuario__sair__link" href="#">sair</a>
+                </div>
+            </section>
+        </div>
+    </header>
+
+    <main>
+        <img class="bg__imagem-superior" src="../img/Forma1.png">
+        <img class="bg__imagem-direita" src="../img/Forma2_dir.png">
+
+        <div class="perfil__container-principal">
+            <section class="perfil__container-central">
+                <div class="perfil__container-central__texto">
+                    <p class="perfil__container-central__texto__paragrafo">Esse é o perfil que aparece para responsáveis ou ONGs que recebem sua mensagem.</p>
+                </div>
+                <form class="perfil__formulario">
+                    <label class="label-azul" for="perfil__formulario__nome">Nome</label>
+                    <input class="perfil__formulario__nome input-branco" id="perfil__formulario__nome" type="text" placeholder="insira seu nome completo" required>
+                    <label class="label-azul" for="perfil__formulario__telefone">Telefone</label>
+                    <input class="perfil__formulario__telefone input-branco" id="perfil__formulario__telefone" type="tel" placeholder="informe seu telefone/whatsapp" required>
+                    <label class="label-azul" for="perfil__formulario__cidade">Cidade</label>
+                    <select class="perfil__formulario__cidade input-branco" id="perfil__formulario__cidade" placeholder="qual sua cidade?" required>
+                        <option value="brasilia" selected disabled></option>
+                        <option value="brasilia">Brasilia</option>
+                        <option value="curitiba">Curitiba</option>
+                        <option value="florianopolis">Florianópolis</option>
+                        <option value="portoalegre">Porto Alegre</option>
+                        <option value="saopaulo">São Paulo</option>
+                    </select>
+                    <label class="label-azul" for="perfil__formulario__sobre">Sobre você</label>
+                    <textarea class="perfil__formulario__sobre input-branco" id="perfil__formulario__sobre" placeholder="escreva sua mensagem" maxlength="100" required></textarea>
+                    <div class="perfil__container-central__botoes">
+                        <input class="perfil__container-central__botao-enviar botao" id="perfil__container-central__botao-enviar" type="button" value="Enviar">
+                    </div>
+                </form>
+            </section>
+        </div>
+    </main> 
+
+    <footer>
+        <div class="rodape">
+            <p class="rodape__texto">Desenvolvido por José Henrique Santos</p>
+        </div>
+    </footer>
+</body>
+</html>

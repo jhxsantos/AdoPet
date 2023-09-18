@@ -1,0 +1,196 @@
+@import url("./css/reset.css");
+@import url("./css/sweetAlert.css");
+@import url("./css/imagens-backgroud.css");
+@import url("./css/cabecalho.css");
+@import url("./css/rodape.css");
+@import url("./css/pag-inicial.css");
+@import url("./css/pag-cadastro.css");
+@import url("./css/pag-login.css");
+@import url("./css/pag-mensagem.css");
+@import url("./css/pag-perfil.css");
+@import url("./css/pag-home.css");
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500&family=Poppins:wght@300;400;500;600&display=swap');
+
+:root {
+    --azul:         #3772FF;
+    --verde:        #36D6AD;
+    --vermelho:     #FC7071; /* botões, links */
+    --rosa:         #FF9D9E; /* botoes (hover) */
+    --cinza:        #737380;
+    --cinza-claro:  #F6F6F6; /* bg input cinza */
+    --branco:       #FFFFFF;
+    --cor-input-placeholder: #BCBCBC;
+
+    
+    --fonte-principal: 'Poppins', sans-serif;
+    --fonte-h3:        'IBM Plex Sans', sans-serif;
+}
+
+body {
+    background-color: var(--branco);
+}
+
+h1 {
+    font-family: var(--fonte-principal);
+    font-size: 68px;
+    font-weight: 500;
+    line-height: 72px;
+    letter-spacing: 0px;
+}
+
+h2 {
+    font-family: var(--fonte-principal);
+    font-size: 42px;
+    font-weight: 500;
+    line-height: 48px;
+    letter-spacing: 0px;    
+}
+
+h3 {
+    font-family: var(--fonte-h3);
+    font-size: 26px;
+    color: var(--branco);
+    font-weight: 500;
+    line-height: 48px;
+    letter-spacing: 0px;    
+}
+
+h4 {font-family: Poppins;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0px;
+    }
+
+p {
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 20px;
+    letter-spacing: 0px;
+}
+
+.texto-pequeno {
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 15px;
+    letter-spacing: 0px;
+}
+
+.legenda {
+    font-family: Poppins;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0px;
+}
+
+.link {
+    text-decoration: none;
+    color: var(--vermelho);
+}
+
+.botao {
+    background-color: var(--vermelho);
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-family: var(--fonte-principal);    
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--branco);
+    text-align: center;
+    text-decoration: none;
+    width: 200px;
+    padding: 0.6rem 0;
+    box-shadow: 2px 2px 4px 0px #00000040;
+}
+
+.botao:hover {
+    background-color: var(--rosa);
+}
+
+.label {
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--cinza);
+    letter-spacing: 0px;
+    text-align: center;
+}
+
+.label-azul {
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--azul);
+    letter-spacing: 0px;
+    text-align: left;
+}
+
+.input {
+    font-family: Poppins;
+    font-size: 12px;
+    font-weight: 300;
+    color: var(--cinza);
+    background: linear-gradient(0deg, #F7F7F7, #F7F7F7), linear-gradient(0deg, #3772FF, #3772FF);
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    box-shadow: 0px 2px 2px 0px #00000026;
+    padding: 0.7rem;
+    margin-top: 0.3rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.input::placeholder {
+    text-align: center;
+    font-family: var(--fonte-principal);
+    color: var(--cor-input-placeholder);
+}
+
+.input-branco {
+    font-family: Poppins;
+    font-size: 12px;
+    font-weight: 300;
+    color: var(--cinza);
+    background: var(--branco);
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    box-shadow: 0px 2px 2px 0px #00000026;
+    padding: 0.7rem;
+    margin-top: 0.3rem;
+    margin-bottom: 1.5rem;
+}
+
+.input-branco::placeholder {
+    text-align: left;
+    font-family: var(--fonte-principal);
+    color: var(--cor-input-placeholder);
+}
+
+@media screen and (min-width: 768px) {
+
+    p {
+        font-size: 18px;
+        font-weight: 400;
+    }
+
+    h3{
+        font-family: var(--fonte-principal);
+        font-size: 28px;
+    }  
+
+    .botao {
+        font-size: 18px;
+    }
+
+}
+
+@media screen and (min-width: 1440px) { 
+    
+}

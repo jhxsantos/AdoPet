@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AluraPet - mensagem</title>
+    <link rel="stylesheet" type="text/css" href="../styles.css" media="screen" />
+
+</head>
+<body>
+    <header>
+        <div class="cabecalho" id="cabecalho"> 
+            <nav class="menu" id="menu">
+                <div class="menu__logo" id="menu__logo">
+                    <img class="menu__logo__imagem" id="menu__logo__imagem" src="../img/Logo-branco.png" alt="Logotipo AluraPet">
+                </div>
+                <div class="menu__home" id="menu__home">
+                    <img class="menu__home_imagem" id="menu__home_imagem" src="../img/Casa.png" alt="Icone link página principal">
+                </div>
+                <div class="menu__mensagem" id="menu__mensagem">
+                    <img class="menu__home_mensagem" id="menu__home_mensagem" src="../img/Mensagens.png" alt="Icone link enviar Mensagem">
+                </div>
+            </nav>
+            <section class="usuario">
+                <div class="usuario__nome">
+                    <p class="usuario__nome__texto legenda">Fulano</p>
+                </div>
+                <div class="usuario__avatar">
+                    <img class="usuario__avatar__imagem" id="usuario__avatar__imagem" src="../img/Usuário.png" alt="Avatar do usuário logado">
+                </div>
+                <div class="usuario__sair">
+                    <a class="legenda link" id="usuario__sair__link" href="#">sair</a>
+                </div>
+            </section>
+        </div>
+    </header>
+
+    <main>
+        <img class="bg__imagem-superior" src="../img/Forma1.png">
+        <img class="bg__imagem-direita" src="../img/Forma2_dir.png">
+
+        <div class="mensagem__container-principal">
+            <section class="mensagem__container-central">
+                <div class="mensagem__container-central__texto">
+                    <p class="mensagem__container-central__texto__paragrafo">Envie uma mensagem para a pessoa ou instituição que está cuidando do animal:</p>
+                </div>
+                <form class="mensagem__formulario">
+                    <label class="label-azul" for="mensagem__formulario__nome">Nome</label>
+                    <input class="mensagem__formulario__nome input-branco" id="mensagem__formulario__nome" type="text" placeholder="insira seu nome completo" required>
+                    <label class="label-azul" for="mensagem__formulario__telefone">Telefone</label>
+                    <input class="mensagem__formulario__telefone input-branco" id="mensagem__formulario__telefone" type="tel" placeholder="informe seu telefone/whatsapp" required>
+                    <label class="label-azul" for="mensagem__formulario__nome-animal">Senha</label>
+                    <input class="mensagem__formulario__nome-animal input-branco" id="mensagem__formulario__nome-animal" type="text" placeholder="por qual bichinho você se interessou?" required>
+                    <label class="label-azul" for="mensagem__formulario__mensagem">Mensagem</label>
+                    <textarea class="mensagem__formulario__mensagem input-branco" id="mensagem__formulario__mensagem" placeholder="escreva sua mensagem" maxlength="100" required></textarea>
+                    <div class="mensagem__container-central__botoes">
+                        <input class="mensagem__container-central__botao-enviar botao" id="mensagem__container-central__botao-enviar" type="button" value="Enviar">
+                    </div>
+                </form>
+            </section>
+        </div>
+    </main> 
+
+    <footer>
+        <div class="rodape">
+            <p class="rodape__texto">Desenvolvido por José Henrique Santos</p>
+        </div>
+    </footer>
+</body>
+</html>

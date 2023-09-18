@@ -1,0 +1,114 @@
+.pag-inicial__body {
+    background-color: var(--azul);
+}
+
+.container-principal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    height: calc(100vh - 497px); 
+    min-height: 352px; 
+}
+
+.container-central {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2.5rem 3.5rem 0 3.5rem;
+    max-width: 350px;
+}
+
+.container-central__logo {
+    padding: 0 0 1rem 0;
+}
+
+.container-central__logo__imagem {
+    height: 45px;
+}
+
+.container-central__mensagem {
+    padding: 1rem 0;
+}
+
+.container-central__mensagem__texto {
+    color: var(--branco);
+    text-align: center;
+}
+
+.container-central__botoes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.7rem;
+    padding: 0.5rem;
+}
+
+.container-central__imagem-pets {  
+    display: flex;
+    justify-content: center;
+}
+
+.container-central__imagem-pets__imagem {
+    width: 250px;
+}
+
+@media screen and (min-width: 768px) {
+
+    .container-principal {
+        height: calc(100vh - 567px); 
+        min-height: 492px;   
+    }
+
+    .container-central {
+        padding: 7rem 0 0 0;
+    }
+
+    .container-central__boas-vindas {
+        padding: 1.5rem 0;
+    }
+
+    .container-central__mensagem {
+        max-width: 100%;
+    }
+
+    .container-central__logo__imagem {
+        height: 60px;
+    }
+
+    .container-central__botao-conta, .container-central__botao-cadastro {
+        min-width: 350px;
+        max-width: 100%;
+    }
+
+    /* .container-central__imagem-pets__imagem {
+        width: 240px;
+    }   */
+}
+
+@media screen and (min-width: 1440px) {
+
+    .container-principal {
+        height: calc(100vh - 550px); 
+        min-height: 415px;   
+    }
+
+    .container-central__texto__paragrafo {
+        font-weight: 400;
+    }
+
+    .container-central {
+        padding: 0 0 0 0;
+        min-width: 350px;
+        max-width: 350px;
+    }
+
+    .container-central__logo__imagem {
+        height: 90px;
+    }
+
+    /* .container-central__imagem-pets__imagem {
+        width: 240px;
+    } */     
+}

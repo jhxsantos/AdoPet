@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AluraPet - cadastro</title>
+    <link rel="stylesheet" type="text/css" href="../styles.css" media="screen" />
+
+</head>
+<body>
+    <header>
+        <div class="cabecalho" id="cabecalho"> 
+            <nav class="menu" id="menu">
+                <div class="menu__logo" id="menu__logo">
+                    <img class="menu__logo__imagem" id="menu__logo__imagem" src="../img/Logo-branco.png" alt="Logotipo AluraPet">
+                </div>
+                <div class="menu__home" id="menu__home">
+                    <img class="menu__home_imagem" id="menu__home_imagem" src="../img/Casa.png" alt="Icone link página principal">
+                </div>
+                <div class="menu__mensagem" id="menu__mensagem">
+                    <img class="menu__home_mensagem" id="menu__home_mensagem" src="../img/Mensagens.png" alt="Icone link enviar Mensagem">
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <img class="bg__imagem-superior" src="../img/Forma1.png">
+        <img class="bg__imagem-esquerda" src="../img/Forma2_esq.png">
+        <img class="bg__imagem-direita" src="../img/Forma2_dir.png">
+        <img class="bg__imagem-patas"    src="../img/Patas.png">
+
+        <div class="cadastro__container-principal">
+            <section class="cadastro__container-central">
+                <div class="cadastro__container-central__logo">
+                    <img class="cadastro__container-central__logo__imagem" id="cadastro__container-central__logo__imagem" src="../img/Logos-03@1x.png" alt="Logotipo AluraPet">
+                </div>
+                <div class="cadastro__container-central__texto">
+                    <p class="cadastro__container-central__texto__paragrafo">Ainda não tem cadastro?</p>
+                    <p class="cadastro__container-central__texto__paragrafo">Antes de buscar seu melhor amigo, precisamos de alguns dados:</p>
+                </div>
+                <form class="cadastro__formulario">
+                    <label class="label" for="cadastro__formulario__email">E-mail</label>
+                    <input class="cadastro__formulario__email input" id="cadastro__formulario__email" type="email" placeholder="insira seu melhor e-mail" required>
+                    <label class="label" for="cadastro__formulario__nome">Nome</label>
+                    <input class="cadastro__formulario__nome input" id="cadastro__formulario__nome" type="text" placeholder="insira seu nome" required>
+                    <label class="label" for="cadastro__formulario__senha">Senha</label>
+                    <input class="cadastro__formulario__senha input" id="cadastro__formulario__senha" type="password" placeholder="crie uma senha" required>
+                    <label class="label" for="cadastro__formulario__confirmar-senha">Confirme a senha</label>
+                    <input class="cadastro__formulario__confirmar-senha input" id="cadastro__formulario__confirmar-senha" type="password" placeholder="repita a senha criada acima" required>
+                    <div class="cadastro__container-central__botoes">
+                        <input class="cadastro__container-central__botao-cadastrar botao" id="cadastro__container-central__botao-enviar" type="button" value="Cadastrar">
+                    </div>
+                </form>
+            </section>        
+        </div>
+    </main> 
+
+    <footer>
+        <div class="rodape">
+            <p class="rodape__texto">Desenvolvido por José Henrique Santos</p>
+        </div>
+    </footer>
+</body>
+</html>

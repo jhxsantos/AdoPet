@@ -1,0 +1,61 @@
+.bg__imagem-superior {
+    width: 360px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 0;
+}
+
+.bg__imagem-direita {
+    width: 65px;
+    height: 370px;
+    position: absolute;
+    top: 200px;
+    right: 0px;
+    z-index: 0;
+    display: none;
+}
+
+
+.bg__imagem-esquerda {
+    width: 65px;
+    height: 370px;
+    position: absolute;
+    top: 370px;
+    left: 0px;
+    z-index: 0;
+    display: block;
+}
+
+.bg__imagem-patas {
+    width: 120px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    z-index: 2;
+}
+
+@media screen and (min-width: 768px) {
+
+    .bg__imagem-superior {
+        width: 560px;
+    }
+
+    .bg__imagem-direita {
+        display: block;
+        width: 120px;
+        height: 570px;
+        top: 260px;
+    }   
+
+    .bg__imagem-esquerda {
+        display: none;        
+    }
+
+    .bg__imagem-patas {
+        width: 230px;
+    }
+
+
+       
+}

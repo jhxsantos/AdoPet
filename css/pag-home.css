@@ -1,0 +1,128 @@
+.home__container-principal {
+    min-height: calc(100vh - 275px);
+}
+
+.home__container-central {
+    display: flex;
+    flex-direction: column;
+    z-index: 2; 
+    padding: 0;
+}
+
+.home__texto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home__texto__paragrafo {
+    text-align: center;
+    padding: 2rem 4rem 1rem 4rem;
+    color: var(--azul);
+}
+
+.home__container-central {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: left;
+    gap: 1rem;
+    z-index: 1;
+}
+
+.animal {
+    background-color: var(--cinza-claro);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem;
+}
+
+.animal__foto {
+    width: 40%;
+}
+
+.animal__foto__imagem {
+    width: 100%;
+}
+
+.animal__info__idade {
+    padding: 0.5rem 0;
+}
+
+.animal__info__indole {
+    padding: 0.5rem 0;
+}
+
+.animal__info__idade, .animal__info__porte, .animal__info__indole {
+    color: var(--cinza);
+}
+
+.animal__info__contato {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    gap: 0.2rem;
+}
+
+.animal__info__cidade {
+    padding-top: 1rem;
+    color: var(--cinza);
+}
+
+.animal__info__responsavel {
+    font-family: Poppins;
+    font-size: 10px;
+    font-weight: 400;
+}
+
+@media screen and (min-width: 768px) {
+
+    .home__container-principal {
+        min-height: calc(100vh - 430px);
+    }
+    
+        .home__texto__paragrafo {
+        padding: 8rem 0 2rem 0;
+    }
+
+    .home__container-central {        
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 1rem;
+        z-index: -1;
+        padding: 0 1rem 2rem 1rem;
+    }
+
+    .animal {
+        width: calc(50% - 2.5rem);
+    }
+    
+}
+
+@media screen and (min-width: 1440px) {
+
+    .home__container-principal {
+        min-height: calc(100vh - 395px);
+    }
+
+    .home__texto__paragrafo {
+        text-align: center;
+        padding: 6rem 4rem 1rem 4rem;
+        color: var(--azul);
+        margin-bottom: 2rem;
+    }
+
+    .home__container-central {
+        padding: 0 7.5rem 2rem 7.5rem;
+    }
+
+    .animal {
+        width: calc(33% - 2.5rem);
+    }
+    
+}

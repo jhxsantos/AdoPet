@@ -1,0 +1,121 @@
+.cadastro__container-principal {
+    width: 100%;
+    height: calc(100vh - 167px); 
+    min-height: calc(800px - 167px);   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.cadastro__container-central {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2.5rem 1.5rem 0 1.5rem;
+    z-index: 1;
+}
+
+.cadastro__container-central__logo {
+    padding: 0 0 1rem 0;
+}
+
+.cadastro__container-central__texto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.cadastro__container-central__texto__paragrafo {
+    text-align: center;
+    padding: 0.3rem;
+}
+
+.cadastro__container-central__logo__imagem {
+    height: 35px;
+}
+
+.cadastro__container-central__texto__paragrafo {
+    color: var(--azul);
+}
+
+.cadastro__formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    z-index: 1;
+}
+
+.cadastro__formulario__email, .cadastro__formulario__nome {
+    width: 100%;
+    max-width: 350px;
+}
+
+.cadastro__formulario__senha, .cadastro__formulario__confirmar-senha {
+    width: 100%;
+    max-width: 350px;
+}
+
+.cadastro__container-central__botoes {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.cadastro__container-central__botao-cadastrar {
+    margin-bottom: 5rem;
+}
+
+@media screen and (min-width: 768px) {
+
+    .cadastro__container-principal {
+        height: calc(100vh - 239px); 
+        min-height: calc(900px - 167px);  
+    }
+
+    .cadastro__container-central {
+        padding: 6rem 0 0 0;
+        max-width: 350px;
+    }
+
+    .cadastro__container-central__texto__paragrafo {
+        font-weight: 400;
+    }
+
+    .cadastro__container-central__logo__imagem {
+        height: 65px;
+    }
+
+       
+}
+
+@media screen and (min-width: 1440px) {
+
+    .cadastro__container-principal {
+        height: calc(100vh - 220px); 
+        min-height: calc(850px - 167px);  
+    }
+
+    .cadastro__container-central {
+        padding: 0 0 0 0;
+        min-width: 550px;
+        max-width: 550px;
+    }
+
+    .cadastro__container-central__texto__paragrafo {
+        width: 350px;
+        font-weight: 400;
+    }
+
+    .cadastro__container-central__logo__imagem {
+        height: 85px;
+    }
+
+    .cadastro__formulario__email, .cadastro__formulario__nome {
+        min-width: 550px;
+    }
+       
+}
+

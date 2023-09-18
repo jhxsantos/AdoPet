@@ -1,0 +1,120 @@
+.login__container-principal {
+    width: 100%;
+    height: calc(100vh - 167px); 
+    min-height: calc(710px - 167px);   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.login__container-central {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(100% - 2rem);
+    max-width: 350px;
+    padding: 2.5rem 1rem 0 1rem;
+    z-index: 1;
+}
+
+.login__container-central__logo {
+    padding: 0 0 1rem 0;
+}
+
+.login__container-central__texto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0;
+    margin-bottom: 2rem;
+}
+
+.login__container-central__logo__imagem {
+    height: 35px;
+}
+
+.login__container-central__texto__paragrafo {
+    color: var(--azul);
+    text-align: center;
+    padding: 0.3rem;
+}
+
+.login__formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    z-index: 1;
+}
+
+.login__formulario__email {
+    width: 100%;
+}
+
+.login__formulario__senha {
+    width: 100%;
+}
+
+.login__container-central__botoes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login__container-central__link__esqueci-senha {    
+    padding: 0.5rem;
+    margin-bottom: 3rem;
+    color: var(--vermelho);
+}
+
+@media screen and (min-width: 768px) {
+
+    .login__container-principal {
+        height: calc(100vh - 239px); 
+        min-height: calc(810px - 167px);  
+    }
+
+    .login__container-central__texto__paragrafo {
+        font-weight: 400;
+    }
+
+    .login__container-central {
+        padding: 6rem 0 0 0;
+        min-width: 350px;
+        max-width: 350px;
+    }
+
+    .login__container-central__logo__imagem {
+        height: 65px;
+    }
+
+       
+}
+
+@media screen and (min-width: 1440px) {
+
+    .login__container-principal {
+        height: calc(100vh - 220px); 
+        min-height: calc(750px - 167px);  
+    }
+
+     .login__container-central {
+        padding: 0 0 0 0;
+        min-width: 550px;
+        max-width: 550px;
+    }
+
+    .login__container-central__logo__imagem {
+        height: 85px;
+    }
+
+    .login__container-central__texto__paragrafo {
+        font-weight: 400;
+    }
+
+    .login__formulario__senha {
+        max-width: 350px;
+    }
+}

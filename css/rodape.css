@@ -1,0 +1,20 @@
+.rodape {
+    display: block;
+    text-align: center;
+    padding: 2rem 0;
+    background-color: var(--verde);
+    z-index: 1;
+}
+
+.rodape__texto {
+    color: var(--branco);
+    line-height: 0;
+}
+
+@media screen and (min-width: 768px) {
+
+    .rodape {
+        padding: 3.5rem 0;
+    }
+
+}
