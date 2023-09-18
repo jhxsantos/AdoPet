@@ -42,10 +42,7 @@
     }
 
     .bg__imagem-direita {
-        display: block;
-        width: 120px;
-        height: 570px;
-        top: 260px;
+        display: none;
     }   
 
     .bg__imagem-esquerda {
@@ -56,6 +53,14 @@
         width: 230px;
     }
 
+}
 
-       
+@media screen and (min-width: 1440px) {
+
+    .bg__imagem-direita {
+        display: block;
+        width: 120px;
+        height: 570px;
+        top: 260px;
+    } 
 }

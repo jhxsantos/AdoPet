@@ -87,7 +87,11 @@
 
     .mensagem__container-principal {
         height: calc(100vh - 235px); 
-        min-height: calc(900px - 167px);
+        min-height: 620px;
+    }
+
+    .mensagem__container-central {
+        padding: 0;
     }
 
 }
