@@ -1,16 +1,27 @@
 import { urlUsuarios } from "./urlAPI.js";
-import { aplicaMascaraTelefone } from "./validacoes.js";
-import { validarTelefone } from "./validacoes.js";
+import { aplicarMascaraTelefone } from "./validacoes.js";
+import { validarTelefone, limparMascaraTelefone } from "./validacoes.js";
+import { carregaListaCidades } from "./listaDeCidades.js";
 
-window.addEventListener("load", () => {
+window.addEventListener("load", async () => {
     const usuarioLogado = sessionStorage.getItem("usuarioLogado");
-    if (!usuarioLogado) window.location.href = "../index.html";
+    if (!usuarioLogado) {
+        window.location.href = "../index.html";
+        return;
+    }
 })
+
+// carregar a lista de cidades (elemento select)
+const select = document.getElementById("perfil__formulario__cidade");
+const erro = await carregaListaCidades(select);
+if (erro) {
+    alert("Não foi possível carregar a lista de cidades: " + erro)    
+}
 
 /*** Ler o arquivo de imagem selecionado **************************/
 const inputFile = document.getElementById("perfil__input_imagem");
 const pictureImage = document.getElementById("perfil__imagem");
-const pictureImageTxt = "imagem";
+const pictureImageTxt = "clique para adicionar sua foto";
 pictureImage.innerHTML = pictureImageTxt;
 
 inputFile.addEventListener("change", function (e) {
@@ -55,18 +66,15 @@ if (usuario.foto !== "" && usuario.foto !== undefined) {
     }
     document.querySelector(".perfil__imagem__imagem").src = usuario.foto;
 } else {
-    console.log("ENTROU");
-    document.getElementById("perfil__imagem").innerHTML = "clique para adicionar imagem";
+    document.getElementById("perfil__imagem").textContent = "clique para adicionar sua foto";
 }
 
 const telefone = document.getElementById("perfil__formulario__telefone");
-
 // aplica máscara no telefone da tela
-aplicaMascaraTelefone(telefone);
-
+aplicarMascaraTelefone(telefone);
 // aplica máscara cada vez que um dígito do telefone é digitado
 telefone.addEventListener("keyup", () => {
-    aplicaMascaraTelefone(telefone);
+    aplicarMascaraTelefone(telefone);
 } )
 
 const btnSalvar = document.getElementById("perfil__container-central__botao-salvar");
@@ -74,14 +82,23 @@ btnSalvar.addEventListener("click", async (evento) => {
     evento.preventDefault();
 
     let telefone = document.getElementById("perfil__formulario__telefone");
+    
     // valida o telefone informado e sai se inválido
-    if (!validarTelefone) return;
-    // retira a máscara do telefone antes de gravar no json
-    telefone = telefone.value.replace("(", "").replace(")", "").replace(" ", "").replace("-", "");
+    const erro = document.getElementById("perfil__erro-formulario__telefone");
+    if (!validarTelefone(telefone, erro)) {
+        telefone.focus();
+        return;
+    }
 
-    const cidade   = document.getElementById("perfil__formulario__cidade").value;
-    const sobre    = document.getElementById("perfil__formulario__sobre").value;
-    const foto     = document.querySelector(".perfil__imagem__imagem").src;
+    // retira a máscara do telefone antes de gravar no json
+    telefone = limparMascaraTelefone(telefone.value);
+
+    const cidade = document.getElementById("perfil__formulario__cidade").value;
+    const sobre  = document.getElementById("perfil__formulario__sobre").value;
+    const imagem = document.querySelector(".perfil__imagem__imagem");
+
+    let foto = "";
+    if (imagem) foto = imagem.src;
 
     const usuarioPUT = {
         id:       idUsuario,
@@ -116,5 +133,5 @@ btnSalvar.addEventListener("click", async (evento) => {
 
     sessionStorage.removeItem("usuarioLogado");
     sessionStorage.setItem("usuarioLogado", JSON.stringify(usuarioPUT));
-    window.location.href = "../html/home.html";
+    // window.location.href = "../html/home.html";
 })

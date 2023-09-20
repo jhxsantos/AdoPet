@@ -4,6 +4,7 @@ import { verificaUsuarioLogado } from "./processarLogin.js";
 
 // preenche a tela com os animais cadastrados
 const animais = await listarAnimais();
+
 const animaisParaMostrar = preparaAnimaisParaMostrar(animais);
 const containerAnimais = document.getElementById("home__container-central");
 containerAnimais.innerHTML = animaisParaMostrar;

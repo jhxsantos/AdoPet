@@ -64,7 +64,7 @@ export function verificaUsuarioLogado() {
         const nome = document.getElementById("usuario__nome__texto");
         if (nome) document.getElementById("usuario__nome__texto").textContent = "";
         const foto = document.getElementById("usuario__avatar__imagem");
-        if (foto) foto.src = "../img/Usuario.png";
+        if (foto) foto.src = "../img/usuario.png";
         const msg =  document.getElementById("menu__perfil");
         if (msg) msg.style.display = "none";
         const user = document.getElementById("usuario");

@@ -54,7 +54,7 @@ export function validarMensagem(mensagem, erro) {
     return true;
 }
 
-/*** Aplicar a máscara no campo telefone ***************************/
+/*** funções de máscara no campo telefone *************************/
 const mascaraTelefone = (value) => {
     if (!value) return ''
     
@@ -65,17 +65,38 @@ const mascaraTelefone = (value) => {
         .replace(/(-\d{4})(\d+?)/, '$1')
 }
     
-export const aplicaMascaraTelefone = (input) => {
-input.value = mascaraTelefone(input.value)
+export const aplicarMascaraTelefone = (telefone) => {
+
+    /*** GAMBIARRA PRA CORRIGIR O PROBLEMA DA MÁSCARA ***/
+    let ultDig = "";
+    if (telefone.value.length === 11) {
+        ultDig = telefone.value.slice(10, 11);
+    }
+    telefone.value = mascaraTelefone(telefone.value)
+    if (telefone.value.length === 15) {
+        ultDig = "";
+    }
+    telefone.value += ultDig;
+    /***************************************************/
+
+    telefone.value = mascaraTelefone(telefone.value)
+}
+
+export const limparMascaraTelefone = (telefone) => {
+    return telefone.replace("(", "").replace(")", "").replace(" ", "").replace("-", "");
 }
 /******************************************************************/
 
 export function validarTelefone(telefone, erro) {    
-    const nroDigitos = ( telefone.value.slice(5, 6) === "9" ) ? 14 : 13;
-    if (telefone.value.length === nroDigitos) {
+
+    const tel = limparMascaraTelefone(telefone.value);
+    const nroDigitos = ( tel.slice(2, 3) === "9" ) ? 11 : 10;
+
+    if (tel.length === nroDigitos) {
         erro.textContent = " "
         return true
     }
+
     erro.textContent = "Informe um telefone válido"
     return false;
 }

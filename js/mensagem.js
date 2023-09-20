@@ -1,4 +1,4 @@
-import { validarNome, validarMensagem, validarTelefone, aplicaMascaraTelefone } from "./validacoes.js";
+import { validarNome, validarMensagem, validarTelefone, aplicarMascaraTelefone } from "./validacoes.js";
 
 window.addEventListener("load", () => {
     const usuarioLogado = sessionStorage.getItem("usuarioLogado");
@@ -24,16 +24,18 @@ nome.addEventListener("keyup", () => {
 
 const telefone = document.getElementById("mensagem__formulario__telefone");
 
+// aplica máscara no telefone da tela
+aplicarMascaraTelefone(telefone);
+// aplica máscara cada vez que um dígito do telefone é digitado
+telefone.addEventListener("keyup", () => {
+    aplicaMascaraTelefone(telefone);
+} )
+
 if (usuario.telefone) {
     telefone.value = usuario.telefone;
-    aplicaMascaraTelefone(telefone);
+    aplicarMascaraTelefone(telefone);
     telefone.setAttribute("disabled", true);
 } 
-
-telefone.addEventListener("keyup", () => {
-    const erro = document.getElementById("mensagem__erro-formulario__telefone");
-    validarTelefone(telefone, erro);        
-})
 
 const mensagem = document.getElementById("mensagem__formulario__mensagem");
 mensagem.addEventListener("keyup", () => {
@@ -69,4 +71,5 @@ btnEnviar.addEventListener("click", (evento) => {
     }
 
     alert("Mensagem enviada! Aguarde o retorno do(a) responsável.");
+    window.location.href = "../html/home.html";
 })
