@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AluraPet - cadastro</title>
+    <title>AdoPet - cadastro</title>
     <link rel="stylesheet" type="text/css" href="../styles.css" media="screen" />
 
 </head>
@@ -12,13 +12,13 @@
         <div class="cabecalho" id="cabecalho"> 
             <nav class="menu" id="menu">
                 <div class="menu__logo" id="menu__logo">
-                    <img class="menu__logo__imagem" id="menu__logo__imagem" src="../img/Logo-branco.png" alt="Logotipo AluraPet">
+                    <img class="menu__logo__imagem" id="menu__logo__imagem" src="../img/Logo-branco.png" alt="Logotipo AdoPet">
                 </div>
                 <div class="menu__home" id="menu__home">
                     <img class="menu__home_imagem" id="menu__home_imagem" src="../img/Casa.png" alt="Icone link página principal">
                 </div>
-                <div class="menu__mensagem" id="menu__mensagem">
-                    <img class="menu__home_mensagem" id="menu__home_mensagem" src="../img/Mensagens.png" alt="Icone link enviar Mensagem">
+                <div class="menu__perfil" id="menu__perfil">
+                    <img width="26px" class="menu__perfil_imagem" id="menu__perfil_imagem" src="../img/cadastro.png" alt="Icone link enviar Mensagem">
                 </div>
             </nav>
         </div>
@@ -27,29 +27,33 @@
     <main>
         <img class="bg__imagem-superior" src="../img/Forma1.png">
         <img class="bg__imagem-esquerda" src="../img/Forma2_esq.png">
-        <img class="bg__imagem-direita" src="../img/Forma2_dir.png">
+        <img class="bg__imagem-direita"  src="../img/Forma2_dir.png">
         <img class="bg__imagem-patas"    src="../img/Patas.png">
 
         <div class="cadastro__container-principal">
             <section class="cadastro__container-central">
                 <div class="cadastro__container-central__logo">
-                    <img class="cadastro__container-central__logo__imagem" id="cadastro__container-central__logo__imagem" src="../img/Logos-03@1x.png" alt="Logotipo AluraPet">
+                    <img class="cadastro__container-central__logo__imagem" id="cadastro__container-central__logo__imagem" src="../img/Logos-03@1x.png" alt="Logotipo AdoPet">
                 </div>
                 <div class="cadastro__container-central__texto">
                     <p class="cadastro__container-central__texto__paragrafo">Ainda não tem cadastro?</p>
                     <p class="cadastro__container-central__texto__paragrafo">Antes de buscar seu melhor amigo, precisamos de alguns dados:</p>
                 </div>
-                <form class="cadastro__formulario">
+                <form class="cadastro__formulario" id="cadastro__formulario" novalidate>
                     <label class="label" for="cadastro__formulario__email">E-mail</label>
-                    <input class="cadastro__formulario__email input" id="cadastro__formulario__email" type="email" placeholder="insira seu melhor e-mail" required>
+                    <input class="cadastro__formulario__email input" id="cadastro__formulario__email" type="email" placeholder="insira seu melhor e-mail" minlength="8" required>
+                    <span class="erro-formulario__input" id="cadastro__erro-formulario__email" aria-live="polite"></span>
                     <label class="label" for="cadastro__formulario__nome">Nome</label>
-                    <input class="cadastro__formulario__nome input" id="cadastro__formulario__nome" type="text" placeholder="insira seu nome" required>
+                    <input class="cadastro__formulario__nome input" id="cadastro__formulario__nome" type="text" placeholder="insira seu nome" minlength="8" required>
+                    <span class="erro-formulario__input" id="cadastro__erro-formulario__nome" aria-live="polite"></span>
                     <label class="label" for="cadastro__formulario__senha">Senha</label>
-                    <input class="cadastro__formulario__senha input" id="cadastro__formulario__senha" type="password" placeholder="crie uma senha" required>
+                    <input class="cadastro__formulario__senha input" id="cadastro__formulario__senha" type="password" placeholder="crie uma senha" minlength="6" required>
+                    <span class="erro-formulario__input" id="cadastro__erro-formulario__senha" aria-live="polite"></span>
                     <label class="label" for="cadastro__formulario__confirmar-senha">Confirme a senha</label>
-                    <input class="cadastro__formulario__confirmar-senha input" id="cadastro__formulario__confirmar-senha" type="password" placeholder="repita a senha criada acima" required>
+                    <input class="cadastro__formulario__confirmar-senha input" id="cadastro__formulario__confirmar-senha" type="password" placeholder="repita a senha criada acima" minlength="6" required>
+                    <span class="erro-formulario__input" id="cadastro__erro-formulario__confirmar-senha" aria-live="polite"></span>
                     <div class="cadastro__container-central__botoes">
-                        <input class="cadastro__container-central__botao-cadastrar botao" id="cadastro__container-central__botao-enviar" type="button" value="Cadastrar">
+                        <input class="cadastro__container-central__botao-cadastrar botao" id="cadastro__container-central__botao-cadastrar" type="button" value="Cadastrar">
                     </div>
                 </form>
             </section>        
@@ -62,4 +66,10 @@
         </div>
     </footer>
 </body>
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+<script type="module" src="../js/cabecalho.js"></script>
+<script type="module" src="../js/cadastro.js"></script>
+
 </html>

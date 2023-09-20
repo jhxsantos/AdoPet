@@ -57,7 +57,7 @@
 @media screen and (min-width: 768px) {
 
     .container-principal {
-        height: calc(100vh - 567px); 
+        height: calc(100vh - 545px); 
         min-height: 492px;   
     }
 
@@ -81,16 +81,12 @@
         min-width: 350px;
         max-width: 100%;
     }
-
-    /* .container-central__imagem-pets__imagem {
-        width: 240px;
-    }   */
 }
 
 @media screen and (min-width: 1440px) {
 
     .container-principal {
-        height: calc(100vh - 550px); 
+        height: calc(100vh - 520px); 
         min-height: 415px;   
     }
 
@@ -108,7 +104,4 @@
         height: 90px;
     }
 
-    /* .container-central__imagem-pets__imagem {
-        width: 240px;
-    } */     
 }

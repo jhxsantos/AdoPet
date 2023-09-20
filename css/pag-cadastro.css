@@ -1,7 +1,7 @@
 .cadastro__container-principal {
     width: 100%;
     height: calc(100vh - 167px); 
-    min-height: calc(800px - 167px);   
+    min-height: calc(800px - 150px);   
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -71,7 +71,7 @@
 @media screen and (min-width: 768px) {
 
     .cadastro__container-principal {
-        height: calc(100vh - 239px); 
+        height: calc(100vh - 220px); 
         min-height: calc(900px - 167px);  
     }
 
@@ -94,8 +94,8 @@
 @media screen and (min-width: 1440px) {
 
     .cadastro__container-principal {
-        height: calc(100vh - 220px); 
-        min-height: calc(850px - 167px);  
+        height: calc(100vh - 183px); 
+        min-height: 670px;  
     }
 
     .cadastro__container-central {

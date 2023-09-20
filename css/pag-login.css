@@ -72,7 +72,7 @@
 @media screen and (min-width: 768px) {
 
     .login__container-principal {
-        height: calc(100vh - 239px); 
+        height: calc(100vh - 220px); 
         min-height: calc(810px - 167px);  
     }
 
@@ -96,7 +96,7 @@
 @media screen and (min-width: 1440px) {
 
     .login__container-principal {
-        height: calc(100vh - 220px); 
+        height: calc(100vh - 186px); 
         min-height: calc(750px - 167px);  
     }
 

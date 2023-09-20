@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AluraPet - mensagem</title>
+    <title>AdoPet - mensagem</title>
     <link rel="stylesheet" type="text/css" href="../styles.css" media="screen" />
 
 </head>
@@ -12,25 +12,32 @@
         <div class="cabecalho" id="cabecalho"> 
             <nav class="menu" id="menu">
                 <div class="menu__logo" id="menu__logo">
-                    <img class="menu__logo__imagem" id="menu__logo__imagem" src="../img/Logo-branco.png" alt="Logotipo AluraPet">
+                    <img class="menu__logo__imagem" id="menu__logo__imagem" src="../img/Logo-branco.png" alt="Logotipo AdoPet">
                 </div>
                 <div class="menu__home" id="menu__home">
                     <img class="menu__home_imagem" id="menu__home_imagem" src="../img/Casa.png" alt="Icone link página principal">
                 </div>
-                <div class="menu__mensagem" id="menu__mensagem">
-                    <img class="menu__home_mensagem" id="menu__home_mensagem" src="../img/Mensagens.png" alt="Icone link enviar Mensagem">
+                <div class="menu__perfil" id="menu__perfil">
+                    <img width="26px" class="menu__perfil_imagem" id="menu__perfil_imagem" src="../img/cadastro.png" alt="Icone link enviar Mensagem">
                 </div>
             </nav>
-            <section class="usuario">
-                <div class="usuario__nome">
-                    <p class="usuario__nome__texto legenda">Fulano</p>
+            <section>
+                <div class="usuario" id="usuario">
+                    <div class="usuario__nome">
+                        <p class="usuario__nome__texto" id="usuario__nome__texto">Fulano</p>
+                    </div>
+                    <div class="usuario__avatar">
+                        <img class="usuario__avatar__imagem" id="usuario__avatar__imagem" src="../img/usuario.png" alt="Avatar do usuário logado">
+                    </div>
+                    <div class="usuario__sair">
+                        <a class="link" id="usuario__sair__link" href="#">sair</a>
+                    </div>
                 </div>
-                <div class="usuario__avatar">
-                    <img class="usuario__avatar__imagem" id="usuario__avatar__imagem" src="../img/Usuário.png" alt="Avatar do usuário logado">
-                </div>
-                <div class="usuario__sair">
-                    <a class="legenda link" id="usuario__sair__link" href="#">sair</a>
-                </div>
+                <div class="login" id="login">
+                    <div>
+                        <a class="link" id="usuario__login__link" href="#">Login</a>
+                    </div>
+                </div>                    
             </section>
         </div>
     </header>
@@ -46,13 +53,17 @@
                 </div>
                 <form class="mensagem__formulario">
                     <label class="label-azul" for="mensagem__formulario__nome">Nome</label>
-                    <input class="mensagem__formulario__nome input-branco" id="mensagem__formulario__nome" type="text" placeholder="insira seu nome completo" required>
+                    <input class="mensagem__formulario__nome input-branco" id="mensagem__formulario__nome" type="text" placeholder="insira seu nome completo" minlength="8" maxlength="35" required disabled>
+                    <span class="erro-formulario__input-branco" id="mensagem__erro-formulario__nome" aria-live="polite"></span>
                     <label class="label-azul" for="mensagem__formulario__telefone">Telefone</label>
                     <input class="mensagem__formulario__telefone input-branco" id="mensagem__formulario__telefone" type="tel" placeholder="informe seu telefone/whatsapp" required>
-                    <label class="label-azul" for="mensagem__formulario__nome-animal">Senha</label>
-                    <input class="mensagem__formulario__nome-animal input-branco" id="mensagem__formulario__nome-animal" type="text" placeholder="por qual bichinho você se interessou?" required>
+                    <span class="erro-formulario__input-branco" id="mensagem__erro-formulario__telefone" aria-live="polite"></span>
+                    <label class="label-azul" for="mensagem__formulario__nome-animal">Animal escolhido</label>
+                    <input class="mensagem__formulario__nome-animal input-branco" id="mensagem__formulario__nome-animal" type="text" placeholder="por qual bichinho você se interessou?" required disabled>
+                    <span class="erro-formulario__input-branco" id="mensagem__erro-formulario__nome-animal" aria-live="polite"></span>
                     <label class="label-azul" for="mensagem__formulario__mensagem">Mensagem</label>
-                    <textarea class="mensagem__formulario__mensagem input-branco" id="mensagem__formulario__mensagem" placeholder="escreva sua mensagem" maxlength="100" required></textarea>
+                    <textarea class="mensagem__formulario__mensagem input-branco" id="mensagem__formulario__mensagem" placeholder="escreva sua mensagem" minlength="20" maxlength="150" required></textarea>
+                    <span class="erro-formulario__input-branco" id="mensagem__erro-formulario__mensagem" aria-live="polite"></span>
                     <div class="mensagem__container-central__botoes">
                         <input class="mensagem__container-central__botao-enviar botao" id="mensagem__container-central__botao-enviar" type="button" value="Enviar">
                     </div>
@@ -67,4 +78,11 @@
         </div>
     </footer>
 </body>
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+
+<script type="module" src="../js/cabecalho.js"></script>
+<script type="module" src="../js/mensagem.js"></script>
+
 </html>

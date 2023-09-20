@@ -15,12 +15,21 @@
     align-items: center;
 }
 
+.menu__home {
+    cursor: pointer;
+}
+
+.menu__perfil {
+    display: none;
+    cursor: pointer;
+}
+
 .menu__logo {
     display: none;
 }
 
 .usuario {
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: right;
     gap: 0.2rem;
@@ -28,12 +37,24 @@
 
 .usuario__nome__texto {
     color: var(--cinza);
+    text-decoration: none;
+    font-family: Poppins;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0px;
+}
+
+.usuario__avatar__imagem {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
 }
 
 @media screen and (min-width: 768px) {
 
     .cabecalho {
-        padding: 4rem 3rem 2rem 3rem;
+        padding: 4rem 3rem 1rem 3rem;
     }
 
     .menu__logo {
@@ -53,6 +74,6 @@
 @media screen and (min-width: 1440px) {
 
     .cabecalho {
-        padding: 3rem 7.5rem 2rem 7.5rem;
+        padding: 3rem 7.5rem 0rem 7.5rem;
     }
 }

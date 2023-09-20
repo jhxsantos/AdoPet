@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AluraPet - principal</title>
+    <title>AdoPet - principal</title>
     <link rel="stylesheet" type="text/css" href="../styles.css" media="screen" />
 
 </head>
@@ -12,25 +12,32 @@
         <div class="cabecalho" id="cabecalho"> 
             <nav class="menu" id="menu">
                 <div class="menu__logo" id="menu__logo">
-                    <img class="menu__logo__imagem" id="menu__logo__imagem" src="../img/Logo-branco.png" alt="Logotipo AluraPet">
+                    <img class="menu__logo__imagem" id="menu__logo__imagem" src="../img/Logo-branco.png" alt="Logotipo AdoPet">
                 </div>
                 <div class="menu__home" id="menu__home">
                     <img class="menu__home_imagem" id="menu__home_imagem" src="../img/Casa.png" alt="Icone link página principal">
                 </div>
-                <div class="menu__mensagem" id="menu__mensagem">
-                    <img class="menu__home_mensagem" id="menu__home_mensagem" src="../img/Mensagens.png" alt="Icone link enviar Mensagem">
+                <div class="menu__perfil" id="menu__perfil">
+                    <img width="26px" class="menu__perfil_imagem" id="menu__perfil_imagem" src="../img/cadastro.png" alt="Icone link enviar Mensagem">
                 </div>
             </nav>
-            <section class="usuario">
-                <div class="usuario__nome">
-                    <p class="usuario__nome__texto legenda">Fulano</p>
+            <section>
+                <div class="usuario" id="usuario">
+                    <div class="usuario__nome">
+                        <p class="usuario__nome__texto" id="usuario__nome__texto">Fulano</p>
+                    </div>
+                    <div class="usuario__avatar">
+                        <img class="usuario__avatar__imagem" id="usuario__avatar__imagem" src="../img/usuario.png" alt="Avatar do usuário logado">
+                    </div>
+                    <div class="usuario__sair">
+                        <a class="link" id="usuario__sair__link" href="#">sair</a>
+                    </div>
                 </div>
-                <div class="usuario__avatar">
-                    <img class="usuario__avatar__imagem" id="usuario__avatar__imagem" src="../img/Usuário.png" alt="Avatar do usuário logado">
-                </div>
-                <div class="usuario__sair">
-                    <a class="legenda link" id="usuario__sair__link" href="#">sair</a>
-                </div>
+                <div class="login" id="login">
+                    <div>
+                        <a class="link" id="usuario__login__link" href="#">Login</a>
+                    </div>
+                </div>                    
             </section>
         </div>
     </header>
@@ -43,167 +50,8 @@
             <p class="home__texto__paragrafo">Olá! Veja os amigos disponíveis para adoção!</p>
         </div>
         <div class="home__container-principal">
-            <section class="home__container-central">            
-                <div class="animal" id="animal">
-                    <div class="animal__foto" id="animal__foto">
-                        <img class="animal__foto__imagem" src="../Imagens Pets/Dunga.png">
-                    </div>
-                    <div class="animal__info">
-                        <p class="label-azul" id="animal__info__nome">Totó</p>
-                        <p class="animal__info__idade texto-pequeno" id="animal__info__idade">2 anos</p>
-                        <p class="animal__info__porte texto-pequeno" id="animal__info__porte">Porte médio</p>
-                        <p class="animal__info__indole texto-pequeno" id="animal__info__indole">Calmo e educado</p>
-                        <p class="animal__info__cidade legenda" id="animal__info__cidade">Florianópolis (SC)</p>
-                        <a class="animal__info__contato link" id="animal__info__contato" href="#">
-                            <img src="../img/icone-mensagem.png" alt="ícone falar com o responsável.">
-                            <p class="animal__info__responsavel">Falar com o responsável</p>
-                        </a>
-                    </div>
-                </div>
-                <div class="animal" id="animal">                
-                    <div class="animal__foto" id="animal__foto">
-                        <img class="animal__foto__imagem" src="../Imagens Pets/Felícia.png">
-                    </div>
-                    <div class="animal__info">
-                        <p class="label-azul" id="animal__info__nome">Felícia</p>
-                        <p class="animal__info__idade texto-pequeno" id="animal__info__idade">3 anos</p>
-                        <p class="animal__info__porte texto-pequeno" id="animal__info__indole">Porte pequeno</p>
-                        <p class="animal__info__indole texto-pequeno" id="animal__info__indole">Educada e calma</p>
-                        <p class="animal__info__cidade legenda" id="animal__info__cidade">Porto Alegre (RS)</p>
-                        <a class="animal__info__contato link" id="animal__info__contato" href="#">
-                            <img src="../img/icone-mensagem.png" alt="ícone falar com o responsável.">
-                            <p class="animal__info__responsavel">Falar com o responsável</p>
-                        </a>
-                    </div>
-                </div>
-                <div class="animal" id="animal">
-                    <div class="animal__foto" id="animal__foto">
-                        <img class="animal__foto__imagem" src="../Imagens Pets/Sid.png">
-                    </div>
-                    <div class="animal__info">
-                        <p class="label-azul" id="animal__info__nome">Sid</p>
-                        <p class="animal__info__idade texto-pequeno" id="animal__info__idade">2 anos</p>
-                        <p class="animal__info__porte texto-pequeno" id="animal__info__indole">Porte médio</p>
-                        <p class="animal__info__indole texto-pequeno" id="animal__info__indole">Agitado</p>
-                        <p class="animal__info__cidade legenda" id="animal__info__cidade">Curitiba (PR)</p>
-                        <a class="animal__info__contato link" id="animal__info__contato" href="#">
-                            <img src="../img/icone-mensagem.png" alt="ícone falar com o responsável.">
-                            <p class="animal__info__responsavel">Falar com o responsável</p>
-                        </a>
-                    </div>
-                </div>
-                <div class="animal" id="animal">
-                    <div class="animal__foto" id="animal__foto">
-                        <img class="animal__foto__imagem" src="../Imagens Pets/Lua.png">
-                    </div>
-                    <div class="animal__info">
-                        <p class="label-azul" id="animal__info__nome">Lua</p>
-                        <p class="animal__info__idade texto-pequeno" id="animal__info__idade">6 meses</p>
-                        <p class="animal__info__porte texto-pequeno" id="animal__info__porte">Porte pequeno</p>
-                        <p class="animal__info__indole texto-pequeno" id="animal__info__indole">Calma e serena</p>
-                        <p class="animal__info__cidade legenda" id="animal__info__cidade">São Paulo (SP)</p>
-                        <a class="animal__info__contato link" id="animal__info__contato" href="#">
-                            <img src="../img/icone-mensagem.png" alt="ícone falar com o responsável.">
-                            <p class="animal__info__responsavel">Falar com o responsável</p>
-                        </a>
-                    </div>
-                </div>
-                <div class="animal" id="animal">
-                    <div class="animal__foto" id="animal__foto">
-                        <img class="animal__foto__imagem" src="../Imagens Pets/Amora.png">
-                    </div>
-                    <div class="animal__info">
-                        <p class="label-azul" id="animal__info__nome">Lua</p>
-                        <p class="animal__info__idade texto-pequeno" id="animal__info__idade">3 meses</p>
-                        <p class="animal__info__porte texto-pequeno" id="animal__info__porte">Porte grande</p>
-                        <p class="animal__info__indole texto-pequeno" id="animal__info__indole">Curioso e brincalhão</p>
-                        <p class="animal__info__cidade legenda" id="animal__info__cidade">Brasilia (DF)</p>
-                        <a class="animal__info__contato link" id="animal__info__contato" href="#">
-                            <img src="../img/icone-mensagem.png" alt="ícone falar com o responsável.">
-                            <p class="animal__info__responsavel">Falar com o responsável</p>
-                        </a>
-                    </div>
-                </div>
-                <div class="animal" id="animal">
-                    <div class="animal__foto" id="animal__foto">
-                        <img class="animal__foto__imagem" src="../Imagens Pets/Dunga.png">
-                    </div>
-                    <div class="animal__info">
-                        <p class="label-azul" id="animal__info__nome">Totó</p>
-                        <p class="animal__info__idade texto-pequeno" id="animal__info__idade">2 anos</p>
-                        <p class="animal__info__porte texto-pequeno" id="animal__info__porte">Porte médio</p>
-                        <p class="animal__info__indole texto-pequeno" id="animal__info__indole">Calmo e educado</p>
-                        <p class="animal__info__cidade legenda" id="animal__info__cidade">Florianópolis (SC)</p>
-                        <a class="animal__info__contato link" id="animal__info__contato" href="#">
-                            <img src="../img/icone-mensagem.png" alt="ícone falar com o responsável.">
-                            <p class="animal__info__responsavel">Falar com o responsável</p>
-                        </a>
-                    </div>
-                </div>
-                <div class="animal" id="animal">                
-                    <div class="animal__foto" id="animal__foto">
-                        <img class="animal__foto__imagem" src="../Imagens Pets/Felícia.png">
-                    </div>
-                    <div class="animal__info">
-                        <p class="label-azul" id="animal__info__nome">Felícia</p>
-                        <p class="animal__info__idade texto-pequeno" id="animal__info__idade">3 anos</p>
-                        <p class="animal__info__porte texto-pequeno" id="animal__info__indole">Porte pequeno</p>
-                        <p class="animal__info__indole texto-pequeno" id="animal__info__indole">Educada e calma</p>
-                        <p class="animal__info__cidade legenda" id="animal__info__cidade">Porto Alegre (RS)</p>
-                        <a class="animal__info__contato link" id="animal__info__contato" href="#">
-                            <img src="../img/icone-mensagem.png" alt="ícone falar com o responsável.">
-                            <p class="animal__info__responsavel">Falar com o responsável</p>
-                        </a>
-                    </div>
-                </div>
-                <div class="animal" id="animal">
-                    <div class="animal__foto" id="animal__foto">
-                        <img class="animal__foto__imagem" src="../Imagens Pets/Sid.png">
-                    </div>
-                    <div class="animal__info">
-                        <p class="label-azul" id="animal__info__nome">Sid</p>
-                        <p class="animal__info__idade texto-pequeno" id="animal__info__idade">2 anos</p>
-                        <p class="animal__info__porte texto-pequeno" id="animal__info__indole">Porte médio</p>
-                        <p class="animal__info__indole texto-pequeno" id="animal__info__indole">Agitado</p>
-                        <p class="animal__info__cidade legenda" id="animal__info__cidade">Curitiba (PR)</p>
-                        <a class="animal__info__contato link" id="animal__info__contato" href="#">
-                            <img src="../img/icone-mensagem.png" alt="ícone falar com o responsável.">
-                            <p class="animal__info__responsavel">Falar com o responsável</p>
-                        </a>
-                    </div>
-                </div>
-                <div class="animal" id="animal">
-                    <div class="animal__foto" id="animal__foto">
-                        <img class="animal__foto__imagem" src="../Imagens Pets/Lua.png">
-                    </div>
-                    <div class="animal__info">
-                        <p class="label-azul" id="animal__info__nome">Lua</p>
-                        <p class="animal__info__idade texto-pequeno" id="animal__info__idade">6 meses</p>
-                        <p class="animal__info__porte texto-pequeno" id="animal__info__porte">Porte pequeno</p>
-                        <p class="animal__info__indole texto-pequeno" id="animal__info__indole">Calma e serena</p>
-                        <p class="animal__info__cidade legenda" id="animal__info__cidade">São Paulo (SP)</p>
-                        <a class="animal__info__contato link" id="animal__info__contato" href="#">
-                            <img src="../img/icone-mensagem.png" alt="ícone falar com o responsável.">
-                            <p class="animal__info__responsavel">Falar com o responsável</p>
-                        </a>
-                    </div>
-                </div>
-                <div class="animal" id="animal">
-                    <div class="animal__foto" id="animal__foto">
-                        <img class="animal__foto__imagem" src="../Imagens Pets/Amora.png">
-                    </div>
-                    <div class="animal__info">
-                        <p class="label-azul" id="animal__info__nome">Lua</p>
-                        <p class="animal__info__idade texto-pequeno" id="animal__info__idade">3 meses</p>
-                        <p class="animal__info__porte texto-pequeno" id="animal__info__porte">Porte grande</p>
-                        <p class="animal__info__indole texto-pequeno" id="animal__info__indole">Curioso e brincalhão</p>
-                        <p class="animal__info__cidade legenda" id="animal__info__cidade">Brasilia (DF)</p>
-                        <a class="animal__info__contato link" id="animal__info__contato" href="#">
-                            <img src="../img/icone-mensagem.png" alt="ícone falar com o responsável.">
-                            <p class="animal__info__responsavel">Falar com o responsável</p>
-                        </a>
-                    </div>
-                </div>
+            <section class="home__container-central" id="home__container-central">
+                
             </section>
         </div>
     </main> 
@@ -214,4 +62,10 @@
         </div>
     </footer>
 </body>
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+<script type="module" src="../js/home.js"></script>
+<script type="module" src="../js/cabecalho.js"></script>
+
 </html>

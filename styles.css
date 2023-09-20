@@ -90,6 +90,11 @@ p {
 .link {
     text-decoration: none;
     color: var(--vermelho);
+    font-family: Poppins;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0px;
 }
 
 .botao {
@@ -133,7 +138,7 @@ p {
 
 .input {
     font-family: Poppins;
-    font-size: 12px;
+    font-size: 16px;
     font-weight: 300;
     color: var(--cinza);
     background: linear-gradient(0deg, #F7F7F7, #F7F7F7), linear-gradient(0deg, #3772FF, #3772FF);
@@ -143,7 +148,6 @@ p {
     box-shadow: 0px 2px 2px 0px #00000026;
     padding: 0.7rem;
     margin-top: 0.3rem;
-    margin-bottom: 1.5rem;
     text-align: center;
 }
 
@@ -151,11 +155,34 @@ p {
     text-align: center;
     font-family: var(--fonte-principal);
     color: var(--cor-input-placeholder);
+    font-size: 14px;
+}
+
+.erro-formulario__input {
+    color: var(--vermelho);
+    font-family: var(--fonte-principal);
+    font-weight: 500;
+    font-size: 12px;
+    margin-bottom: 1rem;
+    margin-top: 2px;
+    text-align: center;
+    height: 10px;
+}
+
+.erro-formulario__input-branco {
+    color: var(--vermelho);
+    font-family: var(--fonte-principal);
+    font-weight: 500;
+    font-size: 12px;
+    margin-bottom: 1rem;
+    margin-top: 2px;
+    text-align: left;
+    height: 10px;
 }
 
 .input-branco {
     font-family: Poppins;
-    font-size: 12px;
+    font-size: 16px;
     font-weight: 300;
     color: var(--cinza);
     background: var(--branco);
@@ -165,13 +192,24 @@ p {
     box-shadow: 0px 2px 2px 0px #00000026;
     padding: 0.7rem;
     margin-top: 0.3rem;
-    margin-bottom: 1.5rem;
 }
 
 .input-branco::placeholder {
     text-align: left;
     font-family: var(--fonte-principal);
     color: var(--cor-input-placeholder);
+    font-size: 14px;
+}
+
+.erro-formulario__input-branco {
+    color: var(--vermelho);
+    font-family: var(--fonte-principal);
+    font-weight: 500;
+    font-size: 12px;
+    margin-bottom: 1rem;
+    margin-top: 2px;
+    text-align: left;
+    height: 10px;
 }
 
 @media screen and (min-width: 768px) {
