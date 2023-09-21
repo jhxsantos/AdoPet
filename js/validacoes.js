@@ -1,6 +1,8 @@
-export function validarEmail(email, erro) {    
+export function validarEmail(email, erro) {   
+    
     if (email.validity.valueMissing) {
-        "Informe o e-mail";
+        erro.textContent = "Informe o e-mail";
+        return false;
     }
     if (email.validity.typeMismatch) { 
         erro.textContent = "Informe um e-mail válido";
