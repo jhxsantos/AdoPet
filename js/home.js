@@ -9,7 +9,7 @@ const animaisParaMostrar = preparaAnimaisParaMostrar(animais);
 const containerAnimais = document.getElementById("home__container-central");
 containerAnimais.innerHTML = animaisParaMostrar;
 
-//precisa chamar aqui porque a validação deve ser feita só 
+// precisa chamar aqui porque a validação deve ser feita só 
 // após carregar os animais na página, pois os links 
 // "Falar com o responsável" dependem dessa validação.
 verificaUsuarioLogado();
@@ -18,11 +18,10 @@ verificaUsuarioLogado();
 const linksResponsavel = document.querySelectorAll(".animal__info__responsavel");
 linksResponsavel.forEach( link => {
     link.addEventListener("click", () => {
-        const idAnimal = link.dataset.id;
-        const nomeAnimal = link.dataset.nome;
+        const idAnimal    = link.dataset.id;
+        const nomeAnimal  = link.dataset.nome;
         const idadeAnimal = link.dataset.idade;
-        const porteAnimal = link.dataset.porte;
+        const porteAnimal = link.dataset.porte;        
         window.location.href = `../html/mensagem.html?idAnimal=${idAnimal}&nomeAnimal=${nomeAnimal}&idadeAnimal=${idadeAnimal}&porteAnimal=${porteAnimal}`;
     })
 })
-

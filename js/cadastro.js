@@ -2,6 +2,7 @@ import { validarEmail } from "./validacoes.js";
 import { validarNome }  from "./validacoes.js";
 import { validarSenha } from "./validacoes.js";
 import { cadastrarUsuario } from "./cadastrarUsuario.js";
+import { customAlert } from "./customAlert.js";
 
 const email  = document.getElementById("cadastro__formulario__email");
 email.addEventListener("keyup", () => {
@@ -84,6 +85,7 @@ btnCadastrar.addEventListener("click", async (evento) => {
             window.location.href = "./login.html";
         }
     } catch(erro) {
-        alert("Problemas ao cadastrar usuário. " + erro);
+        await customAlert("", "Problemas ao cadastrar usuário. " + erro, "error", "OK");
+        // alert("Problemas ao cadastrar usuário. " + erro);
     }
 });

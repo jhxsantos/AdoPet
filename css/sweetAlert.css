@@ -1,11 +1,14 @@
 .swal-overlay {
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.7);
 }
 
 .swal-modal {
-    background-color: var(--cor-de-fundo);
-    border-radius: 0px;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    background-color: var(--azul); 
+    background-image: url(../img/forma1.png);
+    background-position: center;
+    border-radius: 8px;
+    box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.4);
+    border: 1px solid var(--cinza-claro);
 }
 
 .swal-title {
@@ -13,27 +16,27 @@
     font-family:  var(--fonte-principal);
     font-weight: 100;
     font-size: 16px;
-    color: var(--cor-do-texto-01);
+    color: var(--cinza);
     box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.0);
 }
 
 .swal-text {
     text-shadow: 0px 0px 0px rgba(0, 0, 0, 0.0); 
-    background-color: var(--cor-busca-bg);
+    background-color: transparent;
+    color: var(--branco);
     font-family:  var(--fonte-principal);
     font-size: 16px;
-    font-weight: 100;
+    font-weight: 400;
     padding: 17px;
     border: none;
-    border-radius: 0px;
+    border-radius: 8px;
     display: block;
     margin: 22px;
     text-align: center;
-    color: var(--cor-do-texto-01);
 }
 
 .swal-footer {
-    background-color: var(--cor-de-fundo);
+    background-color: var(--branco);
     margin-top: 32px0;
     overflow: hidden;
     text-align: center;
@@ -49,11 +52,11 @@
     border-radius: 0px;
     outline: none;
     border: none;
-    background-color: var(--cor-do-botao);
-    color: var(--cor-de-fundo);
+    background-color: var(--vermelho);
+    color: var(--branco);
     cursor: pointer;
 }
 
 .swal-button:hover {
-    background-color: var(--cor-do-botao-hover);
+    background-color: var(--rosa);
 }

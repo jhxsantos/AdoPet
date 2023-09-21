@@ -1,4 +1,5 @@
 import { urlUsuarios } from "./urlAPI.js";
+import { customAlert } from "./customAlert.js";
 
 export const cadastrarUsuario = async (nome, email, senha) => {
 
@@ -11,7 +12,8 @@ export const cadastrarUsuario = async (nome, email, senha) => {
         const usuarios = await resposta.json();
 
         if (usuarios.length > 0) {
-            alert("E-mail já cadastrado! Informe outro ou faça login.");
+            await customAlert("", "E-mail já cadastrado! Informe outro ou faça login.", "warning", "OK");
+            // alert("E-mail já cadastrado! Informe outro ou faça login.");
             document.getElementById("cadastro__formulario__email").value = "";
             document.getElementById("cadastro__formulario__email").focus();
             return false;

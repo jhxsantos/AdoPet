@@ -1,6 +1,7 @@
 import { validarEmail } from "./validacoes.js";
 import { validarSenha } from "./validacoes.js";
 import { efetuarLogin } from "./processarLogin.js";
+import { customAlert } from "./customAlert.js";
 
 const email  = document.getElementById("login__formulario__email");
 email.addEventListener("keyup", () => {
@@ -15,7 +16,7 @@ senha.addEventListener("keyup", () => {
 });
 
 const btnEntrar = document.getElementById("login__container-central__botao-entrar");
-btnEntrar.addEventListener("click", (evento) => {
+btnEntrar.addEventListener("click", async (evento) => {
     evento.preventDefault();
 
     let erro;
@@ -38,7 +39,8 @@ btnEntrar.addEventListener("click", (evento) => {
         // busca informações do usuário logado e joga na sessionStorage
         efetuarLogin(email.value, senha.value)
     } catch(erro) {
-        alert("Problemas ao efetuar o login. " + erro);
+        await customAlert("", "Problemas ao efetuar o login. " + erro, "error", "OK");
+        // alert("Problemas ao efetuar o login. " + erro);
     }
 });
 

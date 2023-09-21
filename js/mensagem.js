@@ -1,4 +1,5 @@
 import { validarNome, validarMensagem, validarTelefone, aplicarMascaraTelefone } from "./validacoes.js";
+import { customAlert } from "./customAlert.js";
 
 window.addEventListener("load", () => {
     const usuarioLogado = sessionStorage.getItem("usuarioLogado");
@@ -44,7 +45,7 @@ mensagem.addEventListener("keyup", () => {
 })
 
 const btnEnviar = document.getElementById("mensagem__container-central__botao-enviar");
-btnEnviar.addEventListener("click", (evento) => {
+btnEnviar.addEventListener("click", async (evento) => {
     evento.preventDefault();
 
     let erro = "";
@@ -70,6 +71,7 @@ btnEnviar.addEventListener("click", (evento) => {
         return;
     }
 
-    alert("Mensagem enviada! Aguarde o retorno do(a) responsável.");
+    await customAlert("", "Mensagem enviada! Aguarde o retorno do(a) responsável.", "success", "OK");
+    // alert("Mensagem enviada! Aguarde o retorno do(a) responsável.");
     window.location.href = "../html/home.html";
 })

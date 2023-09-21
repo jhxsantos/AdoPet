@@ -15,7 +15,7 @@ export async function listarAnimais() {
 
 export function preparaAnimaisParaMostrar(animais) {
     let animaisParaMostrar = "";
-    animais.forEach( animal => {
+    animais.forEach( (animal, i) => {
         const animalDaVez = `<div class="animal" id="animal">
                                 <div class="animal__foto" id="animal__foto">
                                     <img class="animal__foto__imagem" src=${animal.foto}>
@@ -34,6 +34,7 @@ export function preparaAnimaisParaMostrar(animais) {
                             </div>`
 
         animaisParaMostrar += animalDaVez;
+        
     })
     return animaisParaMostrar;
 }

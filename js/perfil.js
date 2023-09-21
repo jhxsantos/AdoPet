@@ -2,6 +2,7 @@ import { urlUsuarios } from "./urlAPI.js";
 import { aplicarMascaraTelefone } from "./validacoes.js";
 import { validarTelefone, limparMascaraTelefone } from "./validacoes.js";
 import { carregaListaCidades } from "./listaDeCidades.js";
+import { customAlert } from "./customAlert.js";
 
 window.addEventListener("load", async () => {
     const usuarioLogado = sessionStorage.getItem("usuarioLogado");
@@ -15,7 +16,8 @@ window.addEventListener("load", async () => {
 const select = document.getElementById("perfil__formulario__cidade");
 const erro = await carregaListaCidades(select);
 if (erro) {
-    alert("Não foi possível carregar a lista de cidades: " + erro)    
+    await customAlert("", "Não foi possível carregar a lista de cidades: " + erro, "error", "OK");
+    // alert("Não foi possível carregar a lista de cidades: " + erro)    
 }
 
 /*** Ler o arquivo de imagem selecionado **************************/
@@ -123,11 +125,13 @@ btnSalvar.addEventListener("click", async (evento) => {
         const resposta = await fetch(urlUsuarios + '/' + idUsuario, config);
         
         if (!resposta.ok) {
-            alert('Erro ao atualizar o perfil: O PUT na API retornou o status "' + resposta.status + '".');
+            await customAlert("", 'Erro ao atualizar o perfil: O PUT na API retornou o status "' + resposta.status + '".', "error", "OK");
+            // alert('Erro ao atualizar o perfil: O PUT na API retornou o status "' + resposta.status + '".');
             return;
         }
     } catch(erro) {
-        alert('Erro ao atualizar o perfil: ' + erro);
+        await customAlert("", 'Erro ao atualizar o perfil: ' + erro, "error", "OK");
+        // alert('Erro ao atualizar o perfil: ' + erro);
         return;
     }
 

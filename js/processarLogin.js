@@ -1,4 +1,5 @@
 import { urlUsuarios } from "./urlAPI.js";
+import { customAlert } from "./customAlert.js";
 
 // busca pelo email informado e, se encontrar 
 // o usuário, grava na sessionStorage
@@ -27,16 +28,19 @@ export async function efetuarLogin(email, senha) {
                 sessionStorage.setItem("usuarioLogado", JSON.stringify(usarioLogado));
                 window.location.href = "../html/home.html";
             } else {
-                alert("Email ou senha inválidos!")
+                await customAlert("", "Email ou senha inválidos!", "warning", "OK");
+                // alert("Email ou senha inválidos!")
                 document.getElementById("login__formulario__email").focus();
             }
         } else {
-            alert("Email ou senha inválidos!")
+            await customAlert("", "Email ou senha inválidos!", "warning", "OK");
+            // alert("Email ou senha inválidos!")
             document.getElementById("login__formulario__email").focus();
         }
 
     } catch(erro) {  
-        alert("Erro ao fazer login! " + erro)            ;
+        await customAlert("", "Erro ao fazer login! " + erro, "error", "OK");
+        // alert("Erro ao fazer login! " + erro)            ;
     }
 };
 
