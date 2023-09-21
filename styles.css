@@ -136,6 +136,12 @@ p {
     text-align: left;
 }
 
+/* Cor do texto do autocomplete */
+input:-webkit-autofill {
+    -webkit-text-fill-color: var(--cinza) !important;
+    -webkit-background-clip: var(--cinza-claro);
+}
+
 .input {
     font-family: Poppins;
     font-size: 16px;
