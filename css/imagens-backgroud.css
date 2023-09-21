@@ -3,7 +3,7 @@
     position: absolute;
     top: 0px;
     left: 0px;
-    z-index: 0;
+    z-index: -2;
 }
 
 .bg__imagem-direita {

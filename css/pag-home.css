@@ -87,6 +87,8 @@
 
     .home__container-principal {
         min-height: calc(100vh - 430px);
+        padding: 0 1rem 2rem 1rem;
+        border-radius: 10px;
     }
     
         .home__texto__paragrafo {
@@ -100,7 +102,6 @@
         flex-wrap: wrap;
         gap: 1rem;
         z-index: -1;
-        padding: 0 1rem 2rem 1rem;
     }
 
     .animal {
@@ -113,6 +114,7 @@
 
     .home__container-principal {
         min-height: calc(100vh - 395px);
+        padding: 0 7.5rem 2rem 7.5rem;
     }
 
     .home__texto__paragrafo {
@@ -120,10 +122,6 @@
         padding: 6rem 4rem 1rem 4rem;
         color: var(--azul);
         margin-bottom: 2rem;
-    }
-
-    .home__container-central {
-        padding: 0 7.5rem 2rem 7.5rem;
     }
 
     .animal {
